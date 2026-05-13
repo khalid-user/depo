@@ -1,0 +1,131 @@
+HTTP code: , type: com.ibm.db2.jcc.am.SqlException
+[12:16:46] [INFO] [dku] running compute_ALTER_COMMANDES_NP - ----------------------------------------
+[12:16:46] [INFO] [dku] running compute_ALTER_COMMANDES_NP - DSS startup: jek version:12.6.5
+[12:16:46] [INFO] [dku] running compute_ALTER_COMMANDES_NP - DSS home: /dataiku/DSS_DATA_AUTOMATION
+[12:16:46] [INFO] [dku] running compute_ALTER_COMMANDES_NP - OS: Linux 4.18.0-553.104.1.el8_10.x86_64 amd64 - Java: Red Hat, Inc. 1.8.0_482
+[12:16:46] [INFO] [dku.flow.jobrunner] running compute_ALTER_COMMANDES_NP - Allocated a slot for this activity!
+[12:16:46] [DEBUG] [dku.flow.jobrunner] running compute_ALTER_COMMANDES_NP - Calling runActivity
+[12:16:46] [INFO] [dku.flow.jobrunner] running compute_ALTER_COMMANDES_NP - Run activity
+[12:16:46] [INFO] [dku.flow.activity] running compute_ALTER_COMMANDES_NP - Executing default pre-activity lifecycle hook
+[12:16:46] [INFO] [dku.flow.activity] running compute_ALTER_COMMANDES_NP - Checking if sources are ready
+[12:16:46] [DEBUG] [dku.flow.activity] running compute_ALTER_COMMANDES_NP - Computing hashes to propagate BEFORE activity
+[12:16:46] [DEBUG] [dku.flow.activity] running compute_ALTER_COMMANDES_NP - Recorded 0 hashes before activity run
+[12:16:46] [DEBUG] [dku.flow.activity] running compute_ALTER_COMMANDES_NP - Building recipe runner of type
+[12:16:46] [DEBUG] [dku.flow.recipes.prerunpropagate] running compute_ALTER_COMMANDES_NP - Pre-run schema propagation not enabled in this job
+[12:16:46] [INFO] [dku.flow.sql] running compute_ALTER_COMMANDES_NP - Found 5 parts and the index of the select is 4
+[12:16:46] [INFO] [dku.recipes.sql] running compute_ALTER_COMMANDES_NP - Substituting variables in SQL query : {
+  "tbl:ALTER_COMMANDES": "\"BDD_RFA_alter_commandes\"",
+  "output:tbl:0": "\"BDD_RFA_alter_commandes\""
+}
+[12:16:46] [INFO] [dku.recipes.sql] running compute_ALTER_COMMANDES_NP - Substituting variables in SQL query : {
+  "tbl:ALTER_COMMANDES": "\"BDD_RFA_alter_commandes\"",
+  "output:tbl:0": "\"BDD_RFA_alter_commandes\""
+}
+[12:16:46] [INFO] [dku.recipes.sql] running compute_ALTER_COMMANDES_NP - Substituting variables in SQL query : {
+  "tbl:ALTER_COMMANDES": "\"BDD_RFA_alter_commandes\"",
+  "output:tbl:0": "\"BDD_RFA_alter_commandes\""
+}
+[12:16:46] [INFO] [dku.recipes.sql] running compute_ALTER_COMMANDES_NP - Substituting variables in SQL query : {
+  "tbl:ALTER_COMMANDES": "\"BDD_RFA_alter_commandes\"",
+  "output:tbl:0": "\"BDD_RFA_alter_commandes\""
+}
+[12:16:46] [INFO] [dku.recipes.sql] running compute_ALTER_COMMANDES_NP - Substituting variables in SQL query : {
+  "tbl:ALTER_COMMANDES": "\"BDD_RFA_alter_commandes\"",
+  "output:tbl:0": "\"BDD_RFA_alter_commandes\""
+}
+[12:16:46] [DEBUG] [dku.flow.activity] running compute_ALTER_COMMANDES_NP - Recipe runner built, will use 1 thread(s)
+[12:16:46] [DEBUG] [dku.flow.activity] running compute_ALTER_COMMANDES_NP - Preparing execution thread: com.dataiku.dip.dataflow.exec.sql.SQLQueryRecipeRunner@19beceed
+[12:16:46] [DEBUG] [dku.flow.activity] running compute_ALTER_COMMANDES_NP - Starting execution thread: Thread[Thread-27,5,main]
+[12:16:46] [DEBUG] [dku.flow.activity] running compute_ALTER_COMMANDES_NP - Execution threads started, waiting for activity end
+[12:16:46] [INFO] [dku.flow.activity] - Run thread for activity compute_ALTER_COMMANDES_NP starting
+[12:16:46] [INFO] [dku.recipes.sql] - Running the SQL query recipe in full-SQL mode
+[12:16:46] [INFO] [dku.flow.sql] - Running the SQL query recipe in full-SQL mode
+[12:16:46] [INFO] [dip.sql.addinsert] - Putting query in INSERT INTO '${projectKey}_alter_commandes': SELECT DISTINCT CAST(trim(A.TABSCHEMA) || '.' || A.TABNAME AS VARCHAR(100)) AS TB_NAME
+FROM SYSCAT.TABLES A, SYSCAT.DATAPARTITIONEXPRESSION B 
+WHERE A.TYPE='T' AND A.TABSCHEMA IN ('BL_FISCA','SL_FISCA') 
+AND A.TABNAME=B.TABNAME AND A.TABNAME LIKE '%_FISCA'
+[12:16:46] [INFO] [dku.recipes.sql] - Substituting variables in SQL query : {
+  "tbl:ALTER_COMMANDES": "\"BDD_RFA_alter_commandes\"",
+  "output:tbl:0": "\"BDD_RFA_alter_commandes\""
+}
+[12:16:46] [INFO] [dku.connections.sql.provider] - Connecting to jdbc:db2://10.111.168.23:50001/dbdrf104 with props: {"user":"urfadkadm","password":"***"} conn=DB_DEV_RFA-PoDIrFm
+[12:16:46] [DEBUG] [dku.connections.sql.driver] - Driver version 4.26
+[12:16:46] [DEBUG] [dku.sql.connection.service.factory] - SQL connection pool disabled (globally or for the connection)
+[12:16:47] [INFO] [dku.connections.sql.provider] - Driver: IBM Data Server Driver for JDBC and SQLJ (JDBC 4.1) 4.26.14 (4.26)
+[12:16:47] [INFO] [dku.connections.sql.provider] - Database: DB2/AIX64 SQL110570 (11.5) rowSize=32677 stmts=0
+[12:16:47] [DEBUG] [dku.resourceusage] - Reporting start of CRU:{"context":{"type":"JOB_ACTIVITY","authIdentifier":"user_dss_technique","projectKey":"BDD_RFA","jobId":"Scenario_build_ALTER_COMMANDES__NP__2026-05-13T10-16-45.931","activityId":"compute_ALTER_COMMANDES_NP","activityType":"recipe","recipeType":"sql_query","recipeName":"compute_ALTER_COMMANDES"},"type":"SQL_CONNECTION","id":"K4pAe6bKHeInkCrS","startTime":1778667407432,"sqlConnection":{"connection":"DB_DEV_RFA"}}
+[12:16:47] [INFO] [dku.sql.generic] - Dropping table
+[12:16:47] [INFO] [dku.dataset.sql] - Executing statement:
+[12:16:47] [INFO] [dku.dataset.sql] - DROP TABLE "BDD_RFA_alter_commandes"
+[12:16:49] [INFO] [dku.dataset.sql] - Statement done
+[12:16:49] [INFO] [dku.sql.generic] - Creating table
+[12:16:49] [INFO] [dku.dataset.sql] - Executing statements:
+[12:16:49] [INFO] [dku.dataset.sql] - CREATE TABLE "BDD_RFA_alter_commandes" (	"TB_NAME" varchar(100)
+)
+COMPRESS YES ADAPTIVE
+DISTRIBUTE BY HASH("TB_NAME")
+IN "TS_DEFAULT_ND" INDEX IN "TS_DEFAULT_NI"
+[12:16:49] [INFO] [dku.dataset.sql] - Executing statement: CREATE TABLE "BDD_RFA_alter_commandes" (	"TB_NAME" varchar(100)
+)
+COMPRESS YES ADAPTIVE
+DISTRIBUTE BY HASH("TB_NAME")
+IN "TS_DEFAULT_ND" INDEX IN "TS_DEFAULT_NI"
+[12:16:49] [INFO] [dku.dataset.sql] - Statement done
+[12:16:49] [DEBUG] [dku.connections.sql.provider] - Commit conn=DB_DEV_RFA-PoDIrFm
+[12:16:49] [INFO] [dku.flow.sql] - Executing statement: 
+[12:16:49] [INFO] [dku.flow.sql] - 
+        ALTER TABLE "BL_FISCA"."SYNTH_CTRL_CORR_ENREG_FISCA"
+        ADD PARTITION SYNTH_CTRL_CORR_ENREG_FISCA_231  STARTING FROM ('20230101') ENDING AT ('20230331')
+        IN BL_FISCA_ND INDEX IN BL_FISCA_NI
+[12:16:49] [DEBUG] [dku.resourceusage] - Reporting start of CRU:{"context":{"type":"JOB_ACTIVITY","authIdentifier":"user_dss_technique","projectKey":"BDD_RFA","jobId":"Scenario_build_ALTER_COMMANDES__NP__2026-05-13T10-16-45.931","activityId":"compute_ALTER_COMMANDES_NP","activityType":"recipe","recipeType":"sql_query","recipeName":"compute_ALTER_COMMANDES"},"type":"SQL_QUERY","id":"4BWnjErhfN12P0cT","startTime":1778667409296,"sqlQuery":{"connectionUsageId":"K4pAe6bKHeInkCrS","connection":"DB_DEV_RFA","query":"\n        ALTER TABLE \"BL_FISCA\".\"SYNTH_CTRL_CORR_ENREG_FISCA\"\n        ADD PARTITION SYNTH_CTRL_CORR_ENREG_FISCA_231  STARTING FROM (\u002720230101\u0027) ENDING AT (\u002720230331\u0027)\n        IN BL_FISCA_ND INDEX IN BL_FISCA_NI"}}
+[12:16:49] [DEBUG] [dku.resourceusage] - Reporting completion of CRU:{"context":{"type":"JOB_ACTIVITY","authIdentifier":"user_dss_technique","projectKey":"BDD_RFA","jobId":"Scenario_build_ALTER_COMMANDES__NP__2026-05-13T10-16-45.931","activityId":"compute_ALTER_COMMANDES_NP","activityType":"recipe","recipeType":"sql_query","recipeName":"compute_ALTER_COMMANDES"},"type":"SQL_QUERY","id":"4BWnjErhfN12P0cT","startTime":1778667409296,"sqlQuery":{"connectionUsageId":"K4pAe6bKHeInkCrS","connection":"DB_DEV_RFA","query":"\n        ALTER TABLE \"BL_FISCA\".\"SYNTH_CTRL_CORR_ENREG_FISCA\"\n        ADD PARTITION SYNTH_CTRL_CORR_ENREG_FISCA_231  STARTING FROM (\u002720230101\u0027) ENDING AT (\u002720230331\u0027)\n        IN BL_FISCA_ND INDEX IN BL_FISCA_NI"}}
+[12:16:49] [DEBUG] [dku.connections.sql.provider] - Close conn=DB_DEV_RFA-PoDIrFm
+[12:16:49] [DEBUG] [dku.resourceusage] - Reporting completion of CRU:{"context":{"type":"JOB_ACTIVITY","authIdentifier":"user_dss_technique","projectKey":"BDD_RFA","jobId":"Scenario_build_ALTER_COMMANDES__NP__2026-05-13T10-16-45.931","activityId":"compute_ALTER_COMMANDES_NP","activityType":"recipe","recipeType":"sql_query","recipeName":"compute_ALTER_COMMANDES"},"type":"SQL_CONNECTION","id":"K4pAe6bKHeInkCrS","startTime":1778667407432,"sqlConnection":{"connection":"DB_DEV_RFA"}}
+[12:16:49] [ERROR] [dku.flow.sql] - Query failed
+[12:16:49] [INFO] [dku.flow.activity] - Run thread failed for activity compute_ALTER_COMMANDES_NP
+com.ibm.db2.jcc.am.SqlException: DB2 SQL Error: SQLCODE=-636, SQLSTATE=56016, SQLERRMC=SYNTH_CTRL_CORR_ENREG_FISCA_231;10, DRIVER=4.26.14
+	at com.ibm.db2.jcc.am.b7.a(b7.java:815)
+	at com.ibm.db2.jcc.am.b7.a(b7.java:66)
+	at com.ibm.db2.jcc.am.b7.a(b7.java:140)
+	at com.ibm.db2.jcc.am.k4.c(k4.java:2824)
+	at com.ibm.db2.jcc.am.k4.d(k4.java:2808)
+	at com.ibm.db2.jcc.am.k4.b(k4.java:2168)
+	at com.ibm.db2.jcc.t4.ab.k(ab.java:446)
+	at com.ibm.db2.jcc.t4.ab.c(ab.java:104)
+	at com.ibm.db2.jcc.t4.p.b(p.java:38)
+	at com.ibm.db2.jcc.t4.av.h(av.java:124)
+	at com.ibm.db2.jcc.am.k4.ak(k4.java:2163)
+	at com.ibm.db2.jcc.am.k4.a(k4.java:3366)
+	at com.ibm.db2.jcc.am.k4.e(k4.java:1131)
+	at com.ibm.db2.jcc.am.k4.execute(k4.java:1110)
+	at com.dataiku.dip.recipes.code.sql.AbstractSQLQueryRecipeRunner.executeCancellableStatement(AbstractSQLQueryRecipeRunner.java:96)
+	at com.dataiku.dip.dataflow.exec.sql.SQLQueryRecipeRunner.runFullSQL(SQLQueryRecipeRunner.java:192)
+	at com.dataiku.dip.dataflow.exec.sql.SQLQueryRecipeRunner.run(SQLQueryRecipeRunner.java:162)
+	at com.dataiku.dip.dataflow.jobrunner.ActivityRunner$FlowRunnableThread.run(ActivityRunner.java:402)
+[12:16:49] [INFO] [dku.flow.activity] running compute_ALTER_COMMANDES_NP - activity is finished
+[12:16:49] [ERROR] [dku.flow.activity] running compute_ALTER_COMMANDES_NP - Activity failed
+com.ibm.db2.jcc.am.SqlException: DB2 SQL Error: SQLCODE=-636, SQLSTATE=56016, SQLERRMC=SYNTH_CTRL_CORR_ENREG_FISCA_231;10, DRIVER=4.26.14
+	at com.ibm.db2.jcc.am.b7.a(b7.java:815)
+	at com.ibm.db2.jcc.am.b7.a(b7.java:66)
+	at com.ibm.db2.jcc.am.b7.a(b7.java:140)
+	at com.ibm.db2.jcc.am.k4.c(k4.java:2824)
+	at com.ibm.db2.jcc.am.k4.d(k4.java:2808)
+	at com.ibm.db2.jcc.am.k4.b(k4.java:2168)
+	at com.ibm.db2.jcc.t4.ab.k(ab.java:446)
+	at com.ibm.db2.jcc.t4.ab.c(ab.java:104)
+	at com.ibm.db2.jcc.t4.p.b(p.java:38)
+	at com.ibm.db2.jcc.t4.av.h(av.java:124)
+	at com.ibm.db2.jcc.am.k4.ak(k4.java:2163)
+	at com.ibm.db2.jcc.am.k4.a(k4.java:3366)
+	at com.ibm.db2.jcc.am.k4.e(k4.java:1131)
+	at com.ibm.db2.jcc.am.k4.execute(k4.java:1110)
+	at com.dataiku.dip.recipes.code.sql.AbstractSQLQueryRecipeRunner.executeCancellableStatement(AbstractSQLQueryRecipeRunner.java:96)
+	at com.dataiku.dip.dataflow.exec.sql.SQLQueryRecipeRunner.runFullSQL(SQLQueryRecipeRunner.java:192)
+	at com.dataiku.dip.dataflow.exec.sql.SQLQueryRecipeRunner.run(SQLQueryRecipeRunner.java:162)
+	at com.dataiku.dip.dataflow.jobrunner.ActivityRunner$FlowRunnableThread.run(ActivityRunner.java:402)
+[12:16:49] [INFO] [dku.flow.activity] running compute_ALTER_COMMANDES_NP - Executing default post-activity lifecycle hook
+[12:16:49] [INFO] [dku.flow.activity] running compute_ALTER_COMMANDES_NP - Done post-activity tasks
+[12:16:49] [INFO] [dku.flow.activity] running compute_ALTER_COMMANDES_NP - done handling times
+[12:16:49] [DEBUG] [dku.flow.jobrunner] running compute_ALTER_COMMANDES_NP - runActivity terminated, success=false
+[12:16:49] [DEBUG] [dku.flow.jobrunner] running compute_ALTER_COMMANDES_NP - Signaling end of activity to backend
+[12:16:49] [DEBUG] [dku.flow.jobrunner] running compute_ALTER_COMMANDES_NP - Done signaling end of activity to backend
